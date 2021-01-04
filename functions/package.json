@@ -1,0 +1,30 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "start": "node scripts/sulvoRevenue/playwright.js",
+    "test": "mocha './**/sulvoRevenue/steps/*.test.js' --timeout 15000",
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "test:e2e": "codeceptjs run --steps --verbose --config=./e2eTests/docker.conf.js"
+  },
+  "engines": {
+    "node": "12.x.x"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-json-schema": "^1.5.1",
+    "codeceptjs": "3.0.0-beta.3",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.1",
+    "jsdoc": "^3.6.6",
+    "playwright": "^1.5.2",
+    "stack-trace": "0.0.10"
+  },
+  "devDependencies": {
+    "@playwright/test": "^0.152.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
